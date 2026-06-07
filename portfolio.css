@@ -1,0 +1,500 @@
+/* =====================================================
+   External CSS Stylesheet for BrewMaster Barista Academy
+   Author: Avenjal Thapa
+   Date:   2026
+   Assessment 3 – Portfolio Website
+   ===================================================== */
+
+/* --- Universal Reset ---
+   Removes default margin and padding from all elements
+   and sets a consistent box-sizing model. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- Body / Page ---
+   Sets the overall page background, font family,
+   text colour, and line spacing for readability. */
+body {
+  background-color: #f5f1eb;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #2c1a0e;
+  line-height: 1.6;
+}
+
+/* --- Page Wrapper ---
+   Centers the page content and limits its maximum width. */
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+/* Outer header bar with dark brown background */
+header {
+  background-color: #6b3e26;
+  padding: 0;
+}
+
+/* Inner header layout: logo on left, title on right */
+.header-inner {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  gap: 15px;
+}
+
+/* Site logo image in the header */
+.site-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* Main site title text in the header */
+#mainheader {
+  color: #ffffff;
+  font-size: 1.8em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* =====================================================
+   NAVIGATION BAR — CSS BUTTONS (A3 Requirement)
+   Each link is styled as a button, not a plain link.
+   ===================================================== */
+
+/* Navigation bar container */
+nav {
+  background-color: #4a2810;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+/* Each navigation link styled as a CSS button */
+nav a {
+  display: inline-block;           /* Allows padding and sizing like a block */
+  background-color: #6b3e26;       /* Button background colour */
+  color: #ffffff;                  /* Button text colour */
+  text-decoration: none;           /* Remove underline */
+  font-weight: bold;
+  font-size: 0.95em;
+  padding: 10px 22px;              /* Vertical and horizontal button padding */
+  margin: 4px 5px;
+  border-radius: 5px;              /* Rounded corners for button appearance */
+  border: 2px solid #c9a06a;       /* Subtle gold border on buttons */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+  letter-spacing: 0.5px;
+}
+
+/* Button hover state — lightens background when mouse is over */
+nav a:hover {
+  background-color: #c9a06a;       /* Gold hover background */
+  color: #2c1a0e;                  /* Dark text on hover for contrast */
+  border-color: #6b3e26;
+}
+
+/* Active/current page button — visually distinct from others */
+nav a.active {
+  background-color: #3e1e0e;
+  color: #f5deb3;
+  border-color: #f5deb3;
+}
+
+/* =====================================================
+   MAIN CONTENT AREA
+   ===================================================== */
+
+/* Main content wrapper with white card background */
+main {
+  background-color: #fffdf9;
+  padding: 30px 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section spacing */
+section {
+  margin-bottom: 30px;
+}
+
+/* --- Headings --- */
+h2 {
+  color: #6b3e26;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #d9c2a3; /* Decorative underline on section headings */
+}
+
+h3 {
+  color: #8b4513;
+  font-size: 1.15em;
+  margin-bottom: 8px;
+  margin-top: 15px;
+}
+
+/* --- Paragraphs --- */
+p {
+  margin-bottom: 12px;
+}
+
+/* Text alignment utility classes */
+.left   { text-align: left; }
+.center { text-align: center; }
+.right  { text-align: right; }
+
+/* --- Lists --- */
+ul {
+  list-style-type: square;
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+
+ol {
+  list-style-type: upper-roman;
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* --- Highlighted text class --- */
+.highlight {
+  color: #8b0000;
+  font-weight: bold;
+}
+
+/* --- Italic/special text class --- */
+.special {
+  font-style: italic;
+}
+
+/* =====================================================
+   IMAGES
+   ===================================================== */
+
+/* General image styling */
+img {
+  border-radius: 8px;
+  margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Centred image helper class */
+.img-center {
+  margin: 15px auto;
+}
+
+/* =====================================================
+   TABLE (A3 Requirement)
+   ===================================================== */
+
+/* Table container */
+table {
+  border-collapse: collapse;  /* Merges cell borders into single lines */
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* Table header cells */
+th {
+  background-color: #6b3e26;
+  color: #ffffff;
+  padding: 12px 10px;
+  text-align: left;
+  font-size: 0.95em;
+  border: 1px solid #4a2810;
+}
+
+/* Table data cells */
+td {
+  padding: 10px;
+  border: 1px solid #d9c2a3;
+  font-size: 0.9em;
+  vertical-align: top;
+}
+
+/* Alternating row colours for readability (zebra striping) */
+tr:nth-child(even) {
+  background-color: #f5ece0;
+}
+
+/* Row hover highlight */
+tr:hover {
+  background-color: #ede0cc;
+}
+
+/* =====================================================
+   FOOTER (A3 Requirement — contact details & copyright)
+   ===================================================== */
+
+footer {
+  background-color: #6b3e26;
+  color: #f5deb3;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+  line-height: 1.8;
+}
+
+/* Footer links */
+footer a {
+  color: #f5deb3;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #ffffff;
+}
+
+/* =====================================================
+   SKILL BAR WIDGET (used on Web Skills page)
+   ===================================================== */
+
+/* Container for a skill bar entry */
+.skill-bar {
+  margin-bottom: 15px;
+}
+
+/* Label above the bar */
+.skill-label {
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #4a2810;
+}
+
+/* Grey track behind the coloured fill */
+.skill-track {
+  background-color: #d9c2a3;
+  border-radius: 5px;
+  height: 18px;
+  width: 100%;
+}
+
+/* Coloured fill portion of the skill bar */
+.skill-fill {
+  background-color: #6b3e26;
+  height: 18px;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.75em;
+  line-height: 18px;
+  padding-left: 8px;
+}
+
+/* =====================================================
+   PRINT STYLES (A3 Requirement)
+   Applies only when the page is printed (Ctrl+P).
+   Removes: navigation bar, background colours/images.
+   Increases font size for readability on paper.
+   ===================================================== */
+@media print {
+
+  /* Remove the navigation bar entirely when printing */
+  nav {
+    display: none;
+  }
+
+  /* Remove background colours — print in plain white */
+  body {
+    background-color: #ffffff;
+    background-image: none;
+    font-size: 14pt;        /* Larger font for printed page */
+    color: #000000;         /* Black text for maximum contrast */
+  }
+
+  /* Header: remove dark background, use black text */
+  header {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  #mainheader {
+    color: #000000;
+    font-size: 20pt;
+  }
+
+  /* Main content: remove card shadow and background */
+  main {
+    background-color: #ffffff;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Footer: remove dark background, use black text */
+  footer {
+    background-color: #ffffff;
+    color: #000000;
+    border-top: 1px solid #000000;
+  }
+
+  footer a {
+    color: #000000;
+  }
+
+  /* Show full URLs after links when printing */
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #555555;
+  }
+
+  /* Prevent page breaks inside tables and sections */
+  table, section {
+    page-break-inside: avoid;
+  }
+}
+/* End of portfolio.css */
+
+/* =====================================================
+   ASSESSMENT 4 ADDITIONS
+   Responsive cards, form styling and JavaScript button.
+   ===================================================== */
+.tagline {
+  color: #f5deb3;
+  margin: 2px 0 0;
+  font-size: 0.95em;
+}
+
+.lead {
+  font-size: 1.08em;
+  color: #3e1e0e;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 25px;
+  align-items: center;
+}
+
+.hero-img, .narrow-img {
+  max-width: 360px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.cards article {
+  border: 1px solid #d9c2a3;
+  background: #fdf8f1;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.primary-btn,
+input[type="submit"],
+input[type="reset"] {
+  background-color: #6b3e26;
+  color: #ffffff;
+  border: 2px solid #c9a06a;
+  border-radius: 5px;
+  padding: 10px 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 6px 6px 6px 0;
+}
+
+.primary-btn:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #c9a06a;
+  color: #2c1a0e;
+}
+
+.note {
+  font-size: 0.9em;
+  color: #5a3a21;
+}
+
+.signup-form {
+  max-width: 760px;
+}
+
+fieldset {
+  border: 1px solid #d9c2a3;
+  border-radius: 8px;
+  padding: 18px;
+  margin-bottom: 20px;
+  background-color: #fffaf3;
+}
+
+legend {
+  font-weight: bold;
+  color: #6b3e26;
+  padding: 0 8px;
+}
+
+.signup-form label {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  border: 1px solid #c9a06a;
+  border-radius: 5px;
+  font: inherit;
+  background-color: #ffffff;
+}
+
+.signup-form input[type="radio"],
+.signup-form input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.form-buttons {
+  margin-top: 10px;
+}
+
+.w90 { width: 90%; }
+.w85 { width: 85%; }
+.w75 { width: 75%; }
+
+@media screen and (max-width: 700px) {
+  .header-inner,
+  .hero {
+    display: block;
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 6px auto;
+    max-width: 280px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    margin: 10px;
+    padding: 20px 14px;
+  }
+}

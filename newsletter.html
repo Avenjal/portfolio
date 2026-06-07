@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    Author: Avenjal Thapa
+    Date: 2026
+    File: newsletter.html
+    Purpose: Newsletter signup HTML5 form for Assessment 4.
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter Signup | BrewMaster Barista Academy</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <script src="js/newsletter.js" defer></script>
+</head>
+<body onload="showWelcomeMessage()">
+  <header>
+    <div class="header-inner wrapper"><img src="images/logo.svg" alt="BrewMaster logo" class="site-logo"><h1 id="mainheader">BrewMaster Barista Academy</h1></div>
+    <nav><a href="index.html">Home</a> <a href="resume.html">Resume</a> <a href="web-development.html">Web Development</a> <a href="customer-service.html">Customer Service</a> <a href="communication.html">Communication</a> <a href="teamwork.html">Teamwork</a> <a href="javascriptpage.html">Newsletter</a></nav>
+  </header>
+  <main class="wrapper">
+    <section>
+      <h2>Newsletter Signup Form</h2>
+      <p class="lead">Required fields are marked with an asterisk (*). Please enter your first name and last name before submitting.</p>
+      <form class="signup-form" action="https://httpbin.org/post" method="post" onsubmit="return validateSignupForm()">
+        <fieldset><legend>Personal Details</legend>
+          <label for="firstName">First Name *</label><input type="text" id="firstName" name="firstName" maxlength="60" size="60">
+          <label for="lastName">Last Name *</label><input type="text" id="lastName" name="lastName" maxlength="60" size="60">
+          <label for="email">Email Address</label><input type="email" id="email" name="email" maxlength="60" size="60">
+        </fieldset>
+        <fieldset><legend>Age Range</legend>
+          <label><input type="radio" name="ageRange" value="15-25"> 15-25</label>
+          <label><input type="radio" name="ageRange" value="26-35"> 26-35</label>
+          <label><input type="radio" name="ageRange" value="36-45"> 36-45</label>
+          <label><input type="radio" name="ageRange" value="46-55"> 46-55</label>
+          <label><input type="radio" name="ageRange" value="55+"> 55+</label>
+        </fieldset>
+        <fieldset><legend>Services of Interest</legend>
+          <label><input type="checkbox" name="services" value="espresso-training"> Espresso Training</label>
+          <label><input type="checkbox" name="services" value="latte-art"> Latte Art Workshops</label>
+          <label><input type="checkbox" name="services" value="cafe-workflow"> Cafe Workflow Training</label>
+          <label><input type="checkbox" name="services" value="customer-service"> Customer Service Coaching</label>
+          <label><input type="checkbox" name="services" value="job-readiness"> Job Readiness Support</label>
+        </fieldset>
+        <fieldset><legend>Message</legend>
+          <label for="message">Questions or comments</label><textarea id="message" name="message" cols="60" rows="3" placeholder="Tell us what you want to learn..."></textarea>
+        </fieldset>
+        <div class="form-buttons"><input type="submit" value="Submit Signup"><input type="reset" value="Reset Form"></div>
+      </form>
+    </section>
+  </main>
+  <footer><p>&copy; 2026 BrewMaster Barista Academy - Avenjal Thapa.</p></footer>
+</body>
+</html>
